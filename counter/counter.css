@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+button {
+  outline: none;
+  border: none;
+  padding: 8px 18px;
+  cursor: pointer;
+  color: #000;
+  margin-right: 8px;
+  border-radius: 4px;
+}
+
+.count {
+  margin-bottom: 14px;
+  font-size: 18px;
+}
+
+.positive {
+  color: #008000;
+}
+
+.negative {
+  color: #ff0000;
+}
+
+.zero {
+  color: #808080;
+}
