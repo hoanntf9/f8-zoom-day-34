@@ -14,6 +14,7 @@ function Counter() {
   };
 
   return <>
+    <h1>Counter App</h1>
     {/* Cách 1: Sử dụng style với điều kiện */}
     <div style={{ color: count > 0 ? "green" : count < 0 ? "red" : "gray" }}>
       <p>Count: {count}</p>

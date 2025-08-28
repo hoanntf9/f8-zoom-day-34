@@ -73,7 +73,7 @@ function Comments() {
         />
 
         <input
-          type="text"
+          type="email"
           id="email"
           placeholder="Email của bạn"
           onChange={handleInputChange}

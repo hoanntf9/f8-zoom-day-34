@@ -57,62 +57,63 @@ function TodoApp() {
   const remaining = total - completed;
 
   return (
-    <form className="todo-container" onSubmit={handleSubmit}>
-      <div className="todo-heading">
-        <span>Todo App</span>
-      </div>
+    <>
+      <h1>
+        Todo List App
+      </h1>
+      <form className="todo-container" onSubmit={handleSubmit}>
+        <div className="add-todo">
+          <input
+            type="text"
+            id="todo-add"
+            placeholder="Thêm mục mới..."
+            value={inputValue}
+            onChange={handleInputChange}
+          />
 
-      <div className="add-todo">
-        <input
-          type="text"
-          id="todo-add"
-          placeholder="Thêm mục mới..."
-          value={inputValue}
-          onChange={handleInputChange}
-        />
-
-        <button type="submit">Thêm</button>
-      </div>
-
-      {todos.length === 0 ? <div className="todo-empty">
-        Chưa có task nào. Hãy thêm task đầu tiên!
-      </div> : (
-        <ul className="todo-list">
-          {todos.map((todo) => (
-            <li
-              className={`todo-item ${todo.completed ? "completed" : ""}`}
-              key={todo.id}
-            >
-              <div>
-                <input
-                  type="checkbox"
-                  id={todo.id}
-                  name="todo"
-                  checked={todo.completed}
-                  onChange={() => toggleTodo(todo.id)}
-                />
-                <label htmlFor={todo.id}>{todo.text}</label>
-              </div>
-
-              <button
-                onClick={() => deleteTodo(todo.id)}
-                className="todo-detele"
-              >
-                <i className="fa-solid fa-trash"></i>
-              </button>
-            </li>
-          ))}
-        </ul>
-      )}
-
-      {todos.length > 0 && (
-        <div>
-          <p><strong>Tổng:</strong> {total} task(s)</p>
-          <p><strong>Hoàn thành:</strong> {completed} task(s)</p>
-          <p><strong>Còn lại:</strong> {remaining} task(s)</p>
+          <button type="submit">Thêm</button>
         </div>
-      )}
-    </form>
+
+        {todos.length === 0 ? <div className="todo-empty">
+          Chưa có task nào. Hãy thêm task đầu tiên!
+        </div> : (
+          <ul className="todo-list">
+            {todos.map((todo) => (
+              <li
+                className={`todo-item ${todo.completed ? "completed" : ""}`}
+                key={todo.id}
+              >
+                <div>
+                  <input
+                    type="checkbox"
+                    id={todo.id}
+                    name="todo"
+                    checked={todo.completed}
+                    onChange={() => toggleTodo(todo.id)}
+                  />
+                  <label htmlFor={todo.id}>{todo.text}</label>
+                </div>
+
+                <button
+                  onClick={() => deleteTodo(todo.id)}
+                  className="todo-detele"
+                >
+                  <i className="fa-solid fa-trash"></i>
+                </button>
+              </li>
+            ))}
+          </ul>
+        )}
+
+        {todos.length > 0 && (
+          <div>
+            <p><strong>Tổng:</strong> {total} task(s)</p>
+            <p><strong>Hoàn thành:</strong> {completed} task(s)</p>
+            <p><strong>Còn lại:</strong> {remaining} task(s)</p>
+          </div>
+        )}
+      </form>
+    </>
   );
 }
 

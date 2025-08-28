@@ -31,9 +31,17 @@ function Product() {
   };
 
   const truncateStr = (str, maxLength = 100) => {
-    if (str.length <= maxLength) return str;
+    if (!str) return "";
+
+
+    if (str.length < maxLength) {
+      return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+
     const subStr = str.slice(0, maxLength);
-    return subStr.slice(0, subStr.lastIndexOf(" ")) + "…";
+    const truncated = subStr.slice(0, subStr.lastIndexOf(" ")) + "…";
+
+    return truncated.charAt(0).toUpperCase() + truncated.slice(1);
   };
 
   if (loading) {

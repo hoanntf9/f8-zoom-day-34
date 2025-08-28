@@ -32,13 +32,6 @@ ul {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-.todo-heading {
-  display: flex;
-  align-items: center;
-  font-size: 28px;
-  color: #666;
-}
-
 h2 span {
   margin-right: 8px;
 }
