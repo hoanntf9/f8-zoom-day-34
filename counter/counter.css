@@ -10,7 +10,18 @@ body {
   font-weight: 400;
   font-style: normal;
   padding: 20px;
-  line-height: 1.6;
+  line-height: 1.7;
+  background: #2193b0;
+  background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);
+  background: linear-gradient(to right, #6dd5ed, #2193b0);
+}
+
+.counter-heading {
+  color: #606060;
+}
+
+.button-wrapper {
+  margin-top: 12px;
 }
 
 button {

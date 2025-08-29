@@ -11,6 +11,7 @@ body {
   font-style: normal;
   padding: 20px;
   line-height: 1.6;
+  background: linear-gradient(to right, #5b86e5, #36d1dc);
 }
 
 button,

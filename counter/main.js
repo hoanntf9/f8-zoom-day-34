@@ -14,7 +14,8 @@ function Counter() {
   };
 
   return <>
-    <h1>Counter App</h1>
+    <h1 className="counter-heading">Counter App</h1>
+
     {/* Cách 1: Sử dụng style với điều kiện */}
     <div style={{ color: count > 0 ? "green" : count < 0 ? "red" : "gray" }}>
       <p>Count: {count}</p>
@@ -27,9 +28,11 @@ function Counter() {
       <div>{count > 0 ? "Dương" : count < 0 ? "Âm" : "Bằng không"}</div>
     </div> */}
 
-    <button onClick={increase}>Tăng (+1)</button>
-    <button onClick={decrease}>Giảm (-1)</button>
-    <button onClick={reset}>Reset (0)</button>
+    <div className="button-wrapper">
+      <button onClick={decrease}>Giảm (-1)</button>
+      <button onClick={reset}>Reset (0)</button>
+      <button onClick={increase}>Tăng (+1)</button>
+    </div>
   </>;
 }
 
